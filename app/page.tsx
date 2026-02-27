@@ -1,5 +1,6 @@
 import { createClient } from '@/utils/supabase'; 
 import CoralCard from '@/components/CoralCard';
+import Link from 'next/dist/client/link';
 
 export default async function Home() {
   const supabase = createClient();
@@ -24,6 +25,11 @@ export default async function Home() {
         <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
           Singapore Reef Market
         </h1>
+        <Link href="/add-listing">
+        <button className="mb-8 bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-lg font-bold transition-colors">
+          + List My Coral
+        </button>
+        </Link>
         <p className="text-slate-400 mt-2">Premium marine livestock from local hobbyists and verified shops.</p>
       </header>
       
