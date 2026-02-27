@@ -15,10 +15,13 @@ export default function CoralCard({ name, price, category, lighting, isLFS, imag
       {/* Image Container */}
       <div className="aspect-square relative w-full overflow-hidden bg-slate-800">
         <Image 
-          src={imageUrl || 'https://via.placeholder.com/400'} 
-          alt={name}
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-110"
+        // This uses the database URL, but if it's the old via.placeholder one, 
+        // it swaps it for the working placehold.co one.
+        src={imageUrl.replace('via.placeholder.com', 'placehold.co') || 'https://placehold.co/400'} 
+        alt={name}
+        fill
+        unoptimized
+        className="object-cover transition-transform duration-300 group-hover:scale-110"
         />
         {/* LFS Badge Overlay */}
         {isLFS && (
