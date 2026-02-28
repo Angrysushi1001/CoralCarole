@@ -5,12 +5,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'placehold.co', // Changed from via.placeholder.com
-        port: '',
-        pathname: '/**',
+        hostname: 'placehold.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'your-id.supabase.co', // REPLACE WITH YOUR ACTUAL SUPABASE HOST
       },
     ],
   },
 };
-
-export default nextConfig;
